@@ -5,8 +5,6 @@ const User = require("../../models/User");
 const baseUrl = "http:localhost:8090";
 
 exports.shorten = async (req, res) => {
-  // create url code
-  console.log("I am in shorten function");
   const urlCode = shortid.generate();
   try {
     req.body.shortUrl = baseUrl + "/" + urlCode;
