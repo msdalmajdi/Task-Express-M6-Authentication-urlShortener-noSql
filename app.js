@@ -9,7 +9,6 @@ const { localStrategy, jwtStrategy } = require("./middleware/passport");
 
 connectDb();
 app.use(express.json());
-
 app.use(passport.initialize());
 passport.use(localStrategy);
 passport.use(jwtStrategy);

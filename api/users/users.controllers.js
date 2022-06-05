@@ -3,12 +3,6 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const keys = require("../../config/keys");
 
-const generateToken = async (user) => {
-  const payload = {
-    user_id: user._id,
-    username: user.username,
-  };
-};
 exports.signin = async (req, res) => {
   try {
     const payload = {
